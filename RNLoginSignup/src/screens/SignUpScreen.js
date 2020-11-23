@@ -15,9 +15,8 @@ const SignUpScreen = ({route, navigation}) => {
     confirm_password: '',
   });
 
-  const handleSignUp = (navigation) => {
+  const handleSignUp = () => {
     // add user data
-    navigation.goBack();
   };
 
   return (

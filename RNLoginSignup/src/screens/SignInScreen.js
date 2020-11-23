@@ -1,21 +1,35 @@
-import React from 'react';
+import React, {useState, useContext} from 'react';
 import {
   SafeAreaView,
   Text,
   TextInput,
   TouchableOpacity,
   View,
+  Alert,
 } from 'react-native';
 import styles from './styles';
+import Users from '../data/Users';
+import {AuthContext} from '../common/context';
 
 const SignInScreen = ({route, navigation}) => {
-  const [data, setData] = React.useState({
+  const {signIn} = useContext(AuthContext);
+  const [data, setData] = useState({
     username: '',
     password: '',
   });
 
-  const handleSignIn = (navigation) => {
-
+  const handleSignIn = (username, password) => {
+    const user = Users.find((item) => {
+      return item.username === username && item.password === password;
+    });
+    if (user) {
+      signIn(user);
+      navigation.navigate('HomeScreen', {screen: 'HomeScreen'});
+    } else {
+      Alert.alert('Warning', 'Username or password field is wrong.', [
+        {text: 'Okay'},
+      ]);
+    }
   };
 
   return (
@@ -56,7 +70,7 @@ const SignInScreen = ({route, navigation}) => {
         </View>
         <View style={styles.buttonContainer}>
           <TouchableOpacity
-            onPress={() => handleSignIn(navigation)}
+            onPress={() => handleSignIn(data.username, data.password)}
             style={styles.button}>
             <Text style={styles.textSign}>Sign In</Text>
           </TouchableOpacity>
