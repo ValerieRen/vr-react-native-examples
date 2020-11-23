@@ -1,6 +1,13 @@
 ## Overview
 
-This is slider using `ScrollView` in React Native. 
+react native slider using `ScrollView`. 
+
+both work for IOS and Android
+
+## Demo
+<video width="35%" controls>
+  <source src="./demo/record.mov" type="video/ogg">
+</video>
 
 ## Example
 
