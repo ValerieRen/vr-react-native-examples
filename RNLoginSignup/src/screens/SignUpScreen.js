@@ -15,34 +15,6 @@ const SignUpScreen = ({route, navigation}) => {
     confirm_password: '',
   });
 
-  const textInputChange = (val) => {
-    if (val.length !== 0) {
-      setData({
-        ...data,
-        username: val,
-      });
-    } else {
-      setData({
-        ...data,
-        username: val,
-      });
-    }
-  };
-
-  const handlePasswordChange = (val) => {
-    setData({
-      ...data,
-      password: val,
-    });
-  };
-
-  const handleConfirmPasswordChange = (val) => {
-    setData({
-      ...data,
-      confirm_password: val,
-    });
-  };
-
   const handleSignUp = (navigation) => {
     // add user data
     navigation.goBack();
@@ -60,7 +32,12 @@ const SignUpScreen = ({route, navigation}) => {
             placeholder="Your Username"
             style={styles.textInput}
             autoCapitalize="none"
-            onChangeText={(val) => textInputChange(val)}
+            onChangeText={(val) =>
+              setData({
+                ...data,
+                username: val,
+              })
+            }
           />
         </View>
 
@@ -71,7 +48,12 @@ const SignUpScreen = ({route, navigation}) => {
             secureTextEntry={true}
             style={styles.textInput}
             autoCapitalize="none"
-            onChangeText={(val) => handlePasswordChange(val)}
+            onChangeText={(val) =>
+              setData({
+                ...data,
+                password: val,
+              })
+            }
           />
         </View>
 
@@ -82,7 +64,12 @@ const SignUpScreen = ({route, navigation}) => {
             secureTextEntry={true}
             style={styles.textInput}
             autoCapitalize="none"
-            onChangeText={(val) => handleConfirmPasswordChange(val)}
+            onChangeText={(val) => {
+              setData({
+                ...data,
+                confirm_password: val,
+              });
+            }}
           />
         </View>
         <View style={styles.buttonContainer}>

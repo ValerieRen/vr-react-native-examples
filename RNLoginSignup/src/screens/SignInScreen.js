@@ -18,13 +18,6 @@ const SignInScreen = ({route, navigation}) => {
 
   };
 
-  const handlePasswordChange = (val) => {
-    setData({
-      ...data,
-      password: val,
-    });
-  };
-
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -53,7 +46,12 @@ const SignInScreen = ({route, navigation}) => {
             secureTextEntry={true}
             style={styles.textInput}
             autoCapitalize="none"
-            onChangeText={(val) => handlePasswordChange(val)}
+            onChangeText={(val) => {
+              setData({
+                ...data,
+                password: val,
+              });
+            }}
           />
         </View>
         <View style={styles.buttonContainer}>
