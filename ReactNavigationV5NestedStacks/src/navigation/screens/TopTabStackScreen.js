@@ -1,11 +1,15 @@
 import React from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import TopTab1Screen from '../components/TopTab1Screen';
-import TopTab2Screen from '../components/TopTab2Screen';
-import {TouchableOpacity, View, Text, Platform, Dimensions} from 'react-native';
+import TopTab1Screen from '../../components/TopTab1Screen';
+import TopTab2Screen from '../../components/TopTab2Screen';
+import {
+  TouchableOpacity,
+  View,
+  Text,
+  Platform,
+  SafeAreaView,
+} from 'react-native';
 import Animated from 'react-native-reanimated';
-import {SafeAreaView} from 'react-native-safe-area-context';
-const screenDimensions = Dimensions.get('screen');
 
 const TopTabStack = createMaterialTopTabNavigator();
 
@@ -80,6 +84,7 @@ function TabBar({state, descriptors, navigation, position}) {
 
           return (
             <TouchableOpacity
+              key={index}
               accessibilityRole="button"
               accessibilityState={isFocused ? {selected: true} : {}}
               accessibilityLabel={options.tabBarAccessibilityLabel}

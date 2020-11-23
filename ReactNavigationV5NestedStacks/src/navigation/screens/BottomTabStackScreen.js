@@ -2,7 +2,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {View, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import SettingsScreen from '../components/SettingsScreen';
+import SettingsScreen from '../../components/SettingsScreen';
 import TopTabStackScreen from './TopTabStackScreen';
 
 const TabStack = createBottomTabNavigator();

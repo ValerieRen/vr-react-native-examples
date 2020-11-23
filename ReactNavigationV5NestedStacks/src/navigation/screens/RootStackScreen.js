@@ -1,6 +1,6 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import DefaultScreen from '../components/DefaultScreen';
+import DefaultScreen from '../../components/DefaultScreen';
 import BottomTabStackScreen from './BottomTabStackScreen';
 import TopTabStackScreen from './TopTabStackScreen';
 
@@ -13,9 +13,8 @@ const RootStackScreen = () => {
         headerShown: false,
         gestureEnabled: false,
       }}>
-      {/*<RootStack.Screen name="DefaultScreen" component={DefaultScreen} />*/}
+      <RootStack.Screen name="DefaultScreen" component={DefaultScreen} />
       <RootStack.Screen name="BottomTab" component={BottomTabStackScreen} />
-      {/*<RootStack.Screen name="TopTab" component={TopTabStackScreen} />*/}
     </RootStack.Navigator>
   );
 };
