@@ -5,7 +5,8 @@ react native slider using `ScrollView`.
 both work for IOS and Android
 
 ## Demo
-![Demo Slider](./demo/record.gif)
+![Demo Slider IOS](./demo/record.gif)
+![Demo Slider Android](./demo/android.gif)
 
 ## Example
 
