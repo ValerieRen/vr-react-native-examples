@@ -10,5 +10,5 @@ work both for IOS and Android
 - react native vector icons
 
 ## Demo
-<img src="./demo/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-11-23%20at%2019.45.07.png?raw=true">
+<img width="70%" src="./demo/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-11-23%20at%2019.45.07.png?raw=true">
 
