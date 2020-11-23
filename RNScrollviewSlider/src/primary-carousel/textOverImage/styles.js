@@ -12,7 +12,7 @@ export default StyleSheet.create({
     flexDirection: 'column',
     ...Platform.select({
       ios: {
-        bottom: 150,
+        bottom: 60,
       },
     }),
   },

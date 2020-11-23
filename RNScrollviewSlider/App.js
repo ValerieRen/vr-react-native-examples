@@ -8,14 +8,14 @@ const dataSource = [
     title: 'Title 1',
     caption: 'Subtitle 1',
     imgUrl: 'http://placeimg.com/640/480/any',
-    titleOverImg: 'text',
-    textListOverImg: ['text1', 'text2'],
+    titleOverImg: 'text1',
+    textListOverImg: ['list1', 'list2'],
   },
   {
     title: 'Title 2',
     caption: 'Subtitle 2',
     imgUrl: 'http://placeimg.com/640/480/any',
-    titleOverImg: 'text',
+    titleOverImg: 'text2',
   },
   {
     title: 'Title 3',
@@ -29,6 +29,7 @@ const dataSource = [
   },
   {
     title: 'Title 5',
+    titleOverImg: 'text5',
     imgUrl: 'http://placeimg.com/640/480/any',
   },
 ];
