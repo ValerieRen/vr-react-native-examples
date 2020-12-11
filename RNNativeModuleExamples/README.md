@@ -2,11 +2,12 @@
 
 native module examples
 
-## Installation
-
-```sh
-npm install react-native-native-modules
+## Run the example
+```bash
+terminal1: cd example && yarn install && yarn start
+terminal2: yarn bootstrap && yarn example ios
 ```
+
 
 ## Usage
 
@@ -24,6 +25,18 @@ CalendarModule.createCalendarEvent(
     (response: string) => {
         console.log(response);
     }
+);
+
+// MapViewModule ios only
+return (
+    <>
+    <MapViewModule
+            onRegionChange={_onRegionChange}
+            region={region}
+            zoomEnabled={true}
+            style={{ flex: 9 }}
+        />
+    </>
 );
 ```
 
