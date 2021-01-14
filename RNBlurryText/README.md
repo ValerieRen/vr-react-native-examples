@@ -1,4 +1,4 @@
-# react-native-blurry-text
+# react-native-blurry-text (WIP)
 
 react native native bridge to show blur text
 
