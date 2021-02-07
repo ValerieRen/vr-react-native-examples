@@ -1,1 +1,1 @@
-## react native example for practise use 
+## react native example for practising use 
